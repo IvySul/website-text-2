@@ -14,5 +14,21 @@
         <span class="grow">g&nbsp;r&nbsp;o&nbsp;w</span>
         <span>up</span>
     </div>
+<script>
+const growWord = document.querySelector(".grow");
+
+let isUp = false;
+const distance = 140; // Change this number to control how far it moves
+
+growWord.addEventListener("mouseover", () => {
+    if (!isUp) {
+        growWord.style.transform = `translateY(-${distance}px)`;
+        isUp = true;
+    } else {
+        growWord.style.transform = `translateY(${distance}px)`;
+        isUp = false;
+    }
+});
+</script>
 </body>
 </html>
